@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.syndesis</groupId>
   <artifactId>syndesis-parent</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0.fuse-000001</version>
   <packaging>pom</packaging>
   <name>Syndesis Parent</name>
   <description>syndesis :: ${project.artifactId}</description>
