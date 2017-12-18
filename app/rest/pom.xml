@@ -20,12 +20,12 @@
   <parent>
     <groupId>io.syndesis</groupId>
     <artifactId>syndesis-parent</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2.0.fuse-000014</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
   <artifactId>syndesis-rest-parent</artifactId>
-  <version>1.2-SNAPSHOT</version>
+  <version>1.2.0.fuse-000014</version>
   <packaging>pom</packaging>
 
   <name>REST :: Parent</name>
@@ -39,7 +39,7 @@
     <basepom.compiler.fail-warnings>true</basepom.compiler.fail-warnings>
     <dep.plugin.compiler.version>3.7.0</dep.plugin.compiler.version>
 
-    <syndesis-connectors.version>${project.version}</syndesis-connectors.version>
+    <syndesis-connectors.version>1.2.0.fuse-000014</syndesis-connectors.version>
     <syndesis-integration-runtime.version>${project.version}</syndesis-integration-runtime.version>
 
     <assertj-core.version>3.6.2</assertj-core.version>
