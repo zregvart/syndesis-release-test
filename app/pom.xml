@@ -26,7 +26,7 @@
 
 	<groupId>io.syndesis</groupId>
 	<artifactId>syndesis-parent</artifactId>
-	<version>1.2.3</version>
+	<version>1.2.3.fuse-000002</version>
 	<packaging>pom</packaging>
 
 	<name>Syndesis :: Parent</name>
@@ -38,7 +38,7 @@
 		<syndesis.policy.version>2</syndesis.policy.version>
 
 		<!-- Atlasmap version-->
-		<atlasmap.version>1.32.2</atlasmap.version>
+		<atlasmap.version>1.32.2.fuse-000001</atlasmap.version>
 
 		<!-- Image names -->
 		<image.s2i>syndesis/syndesis-s2i:%l</image.s2i>
@@ -63,7 +63,7 @@
 		<activemq.version>5.15.2</activemq.version>
 
 		<!-- Global camel version used everywhere -->
-		<camel.version>2.20.1</camel.version>
+		<camel.version>2.21.0.fuse-000033</camel.version>
 
 		<!-- Don't fork based on cores, doesn't work nicely in the cloud -->
 		<basepom.test.fork-count>1</basepom.test.fork-count>
