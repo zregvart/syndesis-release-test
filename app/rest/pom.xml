@@ -20,12 +20,12 @@
   <parent>
     <groupId>io.syndesis</groupId>
     <artifactId>syndesis-parent</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2.0.fuse-000017</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
   <artifactId>syndesis-rest-parent</artifactId>
-  <version>1.2-SNAPSHOT</version>
+  <version>1.2.0.fuse-000017</version>
   <packaging>pom</packaging>
 
   <name>REST :: Parent</name>
@@ -39,7 +39,7 @@
     <basepom.compiler.fail-warnings>true</basepom.compiler.fail-warnings>
     <dep.plugin.compiler.version>3.7.0</dep.plugin.compiler.version>
 
-    <syndesis-connectors.version>${project.version}</syndesis-connectors.version>
+    <syndesis-connectors.version>1.2.0.fuse-000017</syndesis-connectors.version>
 
     <camel.runtime.version>${camel.version}</camel.runtime.version>
     <derby.version>10.14.1.0</derby.version>
