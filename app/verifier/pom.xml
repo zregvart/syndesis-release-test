@@ -20,13 +20,13 @@
   <parent>
     <groupId>io.syndesis</groupId>
     <artifactId>syndesis-parent</artifactId>
-    <version>1.2.9</version>
+    <version>1.2.9.fuse-000001</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
   <artifactId>syndesis-verifier</artifactId>
   <name>Verifier</name>
-  <version>1.2.9</version>
+  <version>1.2.9.fuse-000001</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -374,6 +374,11 @@
         <artifactId>maven-dependency-plugin</artifactId>
         <configuration>
           <ignoredUnusedDeclaredDependencies>
+            <ignoredUnusedDeclaredDependency>io.syndesis:sql-common</ignoredUnusedDeclaredDependency>
+            <ignoredUnusedDeclaredDependency>junit:junit</ignoredUnusedDeclaredDependency>
+            <ignoredUnusedDeclaredDependency>commons-io:commons-io</ignoredUnusedDeclaredDependency>
+            <ignoredUnusedDeclaredDependency>org.assertj:assertj-core</ignoredUnusedDeclaredDependency>
+
             <ignoredUnusedDeclaredDependency>com.paypal.springboot:resteasy-spring-boot-starter</ignoredUnusedDeclaredDependency>
             <ignoredUnusedDeclaredDependency>org.springframework.boot:spring-boot-starter-web:</ignoredUnusedDeclaredDependency>
             <ignoredUnusedDeclaredDependency>org.springframework.boot:spring-boot-starter-undertow</ignoredUnusedDeclaredDependency>
