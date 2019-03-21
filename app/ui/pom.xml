@@ -155,7 +155,7 @@
               <goal>yarn</goal>
             </goals>
             <configuration>
-              <arguments>lint</arguments>
+              <arguments>lint --configuration=</arguments>
             </configuration>
           </execution>
           <execution>
