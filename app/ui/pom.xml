@@ -126,7 +126,6 @@
             <goals>
               <goal>npm</goal>
             </goals>
-            <phase>generate-resources</phase>
             <configuration>
               <arguments>install -g node-sass@4.9.0 --loglevel=silly --max-sockets=30 --fetch-retry-mintimeout=60000 --fetch-retries=10</arguments>
             </configuration>
@@ -147,15 +146,6 @@
             </goals>
             <configuration>
               <arguments>cache dir</arguments>
-            </configuration>
-          </execution>
-          <execution>
-            <id>yarn ng lint</id>
-            <goals>
-              <goal>yarn</goal>
-            </goals>
-            <configuration>
-              <arguments>lint --configuration=/dev/null</arguments>
             </configuration>
           </execution>
           <execution>
