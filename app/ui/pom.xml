@@ -150,15 +150,6 @@
             </configuration>
           </execution>
           <execution>
-            <id>yarn ng lint</id>
-            <goals>
-              <goal>yarn</goal>
-            </goals>
-            <configuration>
-              <arguments>lint --configuration=</arguments>
-            </configuration>
-          </execution>
-          <execution>
             <id>yarn ng test</id>
             <goals>
               <goal>yarn</goal>
