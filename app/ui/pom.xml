@@ -190,6 +190,7 @@
               <goal>single</goal>
             </goals>
             <configuration>
+              <tarLongFileMode>posix</tarLongFileMode>
               <ignoreMissingDescriptor>false</ignoreMissingDescriptor>
               <descriptors>
                 <descriptor>src/assembly/unix-dist.xml</descriptor>
