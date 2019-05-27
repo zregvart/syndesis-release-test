@@ -30,9 +30,18 @@
   <packaging>pom</packaging>
 
   <name>UI</name>
-
+  <properties>
+      <npmRegistryURL2></npmRegistryURL2>
+  </properties>
   <build>
     <plugins>
+      <plugin>
+        <groupId>com.github.spotbugs</groupId>
+        <artifactId>spotbugs-maven-plugin</artifactId>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>com.github.eirslett</groupId>
         <artifactId>frontend-maven-plugin</artifactId>
@@ -57,12 +66,84 @@
             </configuration>
           </execution>
           <execution>
+            <id>set https proxy</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>config set https-proxy http://${buildContentId}+tracking:${accessToken}@${proxyServer}:${proxyPort}</arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>set http proxy</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>config set proxy http://${buildContentId}+tracking:${accessToken}@${proxyServer}:${proxyPort}</arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>set maxconn</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>config set maxsockets 30</arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>npm set registry</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>config set registry ${npmRegistryURL2}</arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>yarn set registry</id>
+            <goals>
+              <goal>yarn</goal>
+            </goals>
+            <configuration>
+              <arguments>config set registry ${npmRegistryURL2}</arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>yarn set no-strict ssl</id>
+            <goals>
+              <goal>yarn</goal>
+            </goals>
+            <configuration>
+              <arguments>config set strict-ssl false</arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>yarn set sass binary url</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>config set sass-binary-site ${sass-binary-site}</arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>install node-sass</id>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>install --global-style node-sass@4.9.0 --loglevel=silly --max-sockets=30 --fetch-retry-mintimeout=60000 --fetch-retries=10</arguments>
+            </configuration>
+          </execution>
+          <execution>
             <id>yarn install</id>
             <goals>
               <goal>yarn</goal>
             </goals>
             <configuration>
-              <arguments>install --no-progress --force</arguments>
+              <arguments>install --verbose  --force  --network-concurrency=30 --child-concurrency=1 --no-progress --pure-lockfile --network-timeout=100000</arguments>
             </configuration>
           </execution>
           <execution>
@@ -72,15 +153,6 @@
             </goals>
             <configuration>
               <arguments>cache dir</arguments>
-            </configuration>
-          </execution>
-          <execution>
-            <id>yarn ng lint</id>
-            <goals>
-              <goal>yarn</goal>
-            </goals>
-            <configuration>
-              <arguments>lint</arguments>
             </configuration>
           </execution>
           <execution>
@@ -108,7 +180,8 @@
               <goal>yarn</goal>
             </goals>
             <configuration>
-              <arguments>build:ci</arguments>
+                <arguments>build:ci</arguments>
+                <yarnInheritsProxyConfigFromMaven>false</yarnInheritsProxyConfigFromMaven>
             </configuration>
           </execution>
         </executions>
@@ -124,6 +197,7 @@
               <goal>single</goal>
             </goals>
             <configuration>
+              <tarLongFileMode>posix</tarLongFileMode>
               <ignoreMissingDescriptor>false</ignoreMissingDescriptor>
               <descriptors>
                 <descriptor>src/assembly/unix-dist.xml</descriptor>
