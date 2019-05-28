@@ -2146,6 +2146,7 @@
   <distributionManagement>
     <snapshotRepository>
       <id>oss-sonatype-staging</id>
+      <name>oss-sonatype-staging</name>
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
     <repository>
@@ -2196,6 +2197,7 @@
     </pluginRepository>
     <pluginRepository>
       <id>apache.snapshots</id>
+      <name>apache.snapshots</name>
       <url>https://repository.apache.org/content/repositories/snapshots/</url>
       <releases>
         <enabled>false</enabled>

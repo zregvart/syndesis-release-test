@@ -26,6 +26,7 @@
   <distributionManagement>
     <snapshotRepository>
       <id>oss-sonatype-staging</id>
+      <name>oss-sonatype-staging</name>
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
     <repository>
@@ -38,10 +39,12 @@
   <repositories>
     <repository>
       <id>jboss-fuse</id>
+      <name>jboss-fuse</name>
       <url>https://origin-repository.jboss.org/nexus/content/groups/ea</url>
     </repository>
     <repository>
       <id>mrrc-redhat</id>
+      <name>mrrc-redhat</name>
       <url>https://maven.repository.redhat.com/ga</url>
     </repository>
   </repositories>
