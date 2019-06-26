@@ -123,40 +123,13 @@
             </configuration>
           </execution>
           <execution>
-            <id>yarn ng lint</id>
-            <goals>
-              <goal>yarn</goal>
-            </goals>
-            <configuration>
-              <arguments>lint</arguments>
-            </configuration>
-          </execution>
-          <execution>
-            <id>yarn ng test</id>
-            <goals>
-              <goal>yarn</goal>
-            </goals>
-            <configuration>
-              <arguments>test:ci</arguments>
-              <skip>${skipTests}</skip>
-            </configuration>
-          </execution>
-          <execution>
-            <id>yarn cleanup</id>
-            <goals>
-              <goal>yarn</goal>
-            </goals>
-            <configuration>
-              <arguments>cleanup</arguments>
-            </configuration>
-          </execution>
-          <execution>
             <id>yarn ng build</id>
             <goals>
               <goal>yarn</goal>
             </goals>
             <configuration>
               <arguments>build:ci</arguments>
+              <yarnInheritsProxyConfigFromMaven>false</yarnInheritsProxyConfigFromMaven>
             </configuration>
           </execution>
         </executions>
