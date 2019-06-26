@@ -96,6 +96,7 @@
             <goals>
               <goal>install-node-and-npm</goal>
             </goals>
+            <phase>validate</phase>
             <configuration>
               <nodeVersion>${node.version}</nodeVersion>
             </configuration>
@@ -105,6 +106,7 @@
             <goals>
               <goal>install-node-and-yarn</goal>
             </goals>
+            <phase>validate</phase>
             <configuration>
               <nodeVersion>${node.version}</nodeVersion>
               <yarnVersion>${yarn.version}</yarnVersion>
@@ -115,6 +117,7 @@
             <goals>
               <goal>yarn</goal>
             </goals>
+            <phase>validate</phase>
             <configuration>
               <arguments>install --force --no-progress --frozen-lockfile ${yarn-install-args} ${yarn-verbose}</arguments>
             </configuration>
