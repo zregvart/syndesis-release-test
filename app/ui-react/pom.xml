@@ -181,7 +181,7 @@
                 <id>set https proxy</id>
                 <phase>initialize</phase>
                 <goals>
-                  <goal>yarn</goal>
+                  <goal>npm</goal>
                 </goals>
                 <configuration>
                   <arguments>config set https-proxy http://${proxy-user}:${proxy-password}@${proxy-server}:${proxy-port}</arguments>
@@ -191,7 +191,7 @@
                 <id>set http proxy</id>
                 <phase>initialize</phase>
                 <goals>
-                  <goal>yarn</goal>
+                  <goal>npm</goal>
                 </goals>
                 <configuration>
                   <arguments>config set proxy http://${proxy-user}:${proxy-password}@${proxy-server}:${proxy-port}</arguments>
@@ -201,7 +201,7 @@
                 <id>set maxconn</id>
                 <phase>initialize</phase>
                 <goals>
-                  <goal>yarn</goal>
+                  <goal>npm</goal>
                 </goals>
                 <configuration>
                   <arguments>config set maxsockets 30</arguments>
