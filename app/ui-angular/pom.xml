@@ -164,7 +164,7 @@
                       <property>proxy-user</property>
                     </requireProperty>
                     <requireProperty>
-                      <property>proxy-password</property>
+                      <property>accessToken</property>
                     </requireProperty>
                     <requireProperty>
                       <property>proxy-port</property>
@@ -186,7 +186,7 @@
                   <goal>yarn</goal>
                 </goals>
                 <configuration>
-                  <arguments>config set https-proxy http://${proxy-user}:${proxy-password}@${proxy-server}:${proxy-port}</arguments>
+                  <arguments>config set https-proxy http://${proxy-user}:${accessToken}@${proxy-server}:${proxy-port}</arguments>
                 </configuration>
               </execution>
               <execution>
@@ -196,7 +196,7 @@
                   <goal>yarn</goal>
                 </goals>
                 <configuration>
-                  <arguments>config set proxy http://${proxy-user}:${proxy-password}@${proxy-server}:${proxy-port}</arguments>
+                  <arguments>config set proxy http://${proxy-user}:${accessToken}@${proxy-server}:${proxy-port}</arguments>
                 </configuration>
               </execution>
               <execution>
