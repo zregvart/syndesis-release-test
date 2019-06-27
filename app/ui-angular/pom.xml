@@ -270,7 +270,7 @@
                 <id>yarn set no-strict ssl</id>
                 <phase>generate-sources</phase>
                 <goals>
-                  <goal>yarn</goal>
+                  <goal>npm</goal>
                 </goals>
                 <configuration>
                   <arguments>config set strict-ssl false</arguments>
