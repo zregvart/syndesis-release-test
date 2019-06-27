@@ -305,7 +305,7 @@
                   <goal>npm</goal>
                 </goals>
                 <configuration>
-                  <arguments>install --global-style node-sass@4.11.0 ${npm-verbose} --max-sockets=30 --fetch-retry-mintimeout=60000 --fetch-retries=10</arguments>
+                  <arguments>install --global-style node-sass@4.12.0 ${npm-verbose} --max-sockets=30 --fetch-retry-mintimeout=60000 --fetch-retries=10</arguments>
                 </configuration>
               </execution>
             </executions>
