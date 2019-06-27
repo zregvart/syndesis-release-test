@@ -289,8 +289,8 @@
             <artifactId>frontend-maven-plugin</artifactId>
             <executions>
               <execution>
-                <id>yarn set sass binary url</id>
-                <phase>initialize</phase>
+                <id>npm set sass binary url</id>
+                <phase>generate-sources</phase>
                 <goals>
                   <goal>npm</goal>
                 </goals>
@@ -299,13 +299,33 @@
                 </configuration>
               </execution>
               <execution>
-                <id>install node-sass</id>
-                <phase>initialize</phase>
+                <id>install node-sass 4.11.0</id>
+                <phase>generate-sources</phase>
                 <goals>
                   <goal>npm</goal>
                 </goals>
                 <configuration>
-                  <arguments>install --global-style node-sass@4.12.0 ${npm-verbose} --max-sockets=30 --fetch-retry-mintimeout=60000 --fetch-retries=10</arguments>
+                  <arguments>install --global-style node-sass@4.11.0 ${npm-verbose} --max-sockets=30 --fetch-retry-mintimeout=60000 --fetch-retries=10</arguments>
+                </configuration>
+              </execution>
+              <execution>
+                <id>npm unset sass binary url</id>
+                <phase>generate-sources</phase>
+                <goals>
+                  <goal>npm</goal>
+                </goals>
+                <configuration>
+                  <arguments>config delete sass-binary-site</arguments>
+                </configuration>
+              </execution>
+              <execution>
+                <id>npm set sass binary dir</id>
+                <phase>generate-sources</phase>
+                <goals>
+                  <goal>npm</goal>
+                </goals>
+                <configuration>
+                  <arguments>config set sass-binary-dir ${user.home}/.npm/node-sass</arguments>
                 </configuration>
               </execution>
             </executions>
