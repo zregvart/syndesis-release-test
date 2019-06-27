@@ -81,6 +81,7 @@
 
           <execution>
             <id>install-node-and-yarn</id>
+            <phase>initialize</phase>
             <goals>
               <goal>install-node-and-yarn</goal>
             </goals>
@@ -92,6 +93,7 @@
 
           <execution>
             <id>yarn-install</id>
+            <phase>compile</phase>
             <goals>
               <goal>yarn</goal>
             </goals>
@@ -179,7 +181,7 @@
             <executions>
               <execution>
                 <id>set https proxy</id>
-                <phase>initialize</phase>
+                <phase>generate-sources</phase>
                 <goals>
                   <goal>npm</goal>
                 </goals>
@@ -189,7 +191,7 @@
               </execution>
               <execution>
                 <id>set http proxy</id>
-                <phase>initialize</phase>
+                <phase>generate-sources</phase>
                 <goals>
                   <goal>npm</goal>
                 </goals>
@@ -199,7 +201,7 @@
               </execution>
               <execution>
                 <id>set maxconn</id>
-                <phase>initialize</phase>
+                <phase>generate-sources</phase>
                 <goals>
                   <goal>npm</goal>
                 </goals>
@@ -227,7 +229,7 @@
             <executions>
               <execution>
                 <id>set registry</id>
-                <phase>initialize</phase>
+                <phase>generate-sources</phase>
                 <goals>
                   <goal>npm</goal>
                 </goals>
@@ -237,7 +239,7 @@
               </execution>
               <execution>
                 <id>yarn set registry</id>
-                <phase>initialize</phase>
+                <phase>generate-sources</phase>
                 <goals>
                   <goal>yarn</goal>
                 </goals>
@@ -260,7 +262,7 @@
             <executions>
               <execution>
                 <id>yarn set no-strict ssl</id>
-                <phase>initialize</phase>
+                <phase>generate-sources</phase>
                 <goals>
                   <goal>yarn</goal>
                 </goals>
@@ -303,7 +305,7 @@
                   <goal>npm</goal>
                 </goals>
                 <configuration>
-                  <arguments>install --global-style node-sass@4.9.0 ${npm-verbose} --max-sockets=30 --fetch-retry-mintimeout=60000 --fetch-retries=10</arguments>
+                  <arguments>install --global-style node-sass@4.11.0 ${npm-verbose} --max-sockets=30 --fetch-retry-mintimeout=60000 --fetch-retries=10</arguments>
                 </configuration>
               </execution>
             </executions>
