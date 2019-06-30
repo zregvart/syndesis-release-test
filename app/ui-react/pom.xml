@@ -307,8 +307,8 @@
                 </goals>
                 <configuration>
                   <url>${iltorb-binary-site}/v${iltorb-version}/iltorb-v${iltorb-version}-node-v64-linux-x64.tar.gz</url>
-                  <outputFileName>iltorb-v2.4.1-node-v64-linux-x64.tar.gz</outputFileName>
-                  <outputDirectory>${user.home}/.npm/_prebuilds/45aa7d-iltorb-v2.4.1-node-v64-linux-x64.tar.gz</outputDirectory>
+                  <outputFileName>45aa7d-iltorb-v${iltorb-version}-node-v64-linux-x64.tar.gz</outputFileName>
+                  <outputDirectory>${user.home}/.npm/_prebuilds/</outputDirectory>
                 </configuration>
               </execution>
             </executions>
