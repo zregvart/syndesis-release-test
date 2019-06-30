@@ -340,7 +340,7 @@
                   <goal>npm</goal>
                 </goals>
                 <configuration>
-                  <arguments>config set sass-binary-dir ${project.build.directory}</arguments>
+                  <arguments>config set sass-binary-path ${project.build.directory}/linux-x64-57/binding.node</arguments>
                 </configuration>
               </execution>
               <execution>
@@ -350,7 +350,7 @@
                   <goal>yarn</goal>
                 </goals>
                 <configuration>
-                  <arguments>config set sass-binary-dir ${project.build.directory}</arguments>
+                  <arguments>config set sass-binary-path ${project.build.directory}/linux-x64-57/binding.node</arguments>
                 </configuration>
               </execution>
             </executions>
