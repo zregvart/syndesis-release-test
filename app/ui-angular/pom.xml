@@ -35,7 +35,7 @@
     <yarn-install-args />
     <yarn-verbose />
     <npm-verbose />
-    <node-sass-version>4.11.0</node-sass-version>
+    <node-sass-version>4.12.0</node-sass-version>
   </properties>
 
   <build>
@@ -302,9 +302,9 @@
                   <goal>wget</goal>
                 </goals>
                 <configuration>
-                  <url>${sass-binary-site}/v${node-sass-version}/linux-x64-57_binding.node</url>
+                  <url>${sass-binary-site}/v${node-sass-version}-1/linux-x64-64_binding.node</url>
                   <outputFileName>binding.node</outputFileName>
-                  <outputDirectory>${project.build.directory}/linux-x64-57</outputDirectory>
+                  <outputDirectory>${project.build.directory}/linux-x64-64</outputDirectory>
                 </configuration>
               </execution>
             </executions>
@@ -340,7 +340,7 @@
                   <goal>npm</goal>
                 </goals>
                 <configuration>
-                  <arguments>config set sass-binary-path ${project.build.directory}/linux-x64-57/binding.node</arguments>
+                  <arguments>config set sass-binary-path ${project.build.directory}/linux-x64-64/binding.node</arguments>
                 </configuration>
               </execution>
               <execution>
@@ -350,7 +350,7 @@
                   <goal>yarn</goal>
                 </goals>
                 <configuration>
-                  <arguments>config set sass-binary-path ${project.build.directory}/linux-x64-57/binding.node</arguments>
+                  <arguments>config set sass-binary-path ${project.build.directory}/linux-x64-64/binding.node</arguments>
                 </configuration>
               </execution>
             </executions>
