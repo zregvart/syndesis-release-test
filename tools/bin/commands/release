@@ -98,14 +98,14 @@ release::run() {
     update_pom_versions "$topdir" "$release_version" "$maven_opts"
 
     # Build and stage artefacts to Sonatype
-    build_and_stage_artefacts "$topdir" "$maven_opts"
+    ###build_and_stage_artefacts "$topdir" "$maven_opts"
 
     # Build all Docker Images
-    docker_login
-    create_syndesis_docker_images "$topdir" "$maven_opts"
+    ###docker_login
+    ###create_syndesis_docker_images "$topdir" "$maven_opts"
 
     # Create the image for the upgrade
-    create_upgrade_docker_image "$topdir" "$release_version"
+    ###create_upgrade_docker_image "$topdir" "$release_version"
 
     # Create the operator image binaries
     update_image_versions "$topdir" "$release_version" "$moving_tag"
@@ -135,7 +135,7 @@ release::run() {
     create_moving_tag_release "$topdir" "$release_version" "$moving_tag"
 
     # Pushing to Docker Hub
-    docker_push "$release_version" "$moving_tag"
+    ###docker_push "$release_version" "$moving_tag"
 
     # Release staging repo
     release_staging_repo "$topdir" "$maven_opts"
